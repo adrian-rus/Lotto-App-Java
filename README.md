@@ -1,8 +1,25 @@
-Application developed by Adrian Rus, Allan Williamson and Brian McDonnell that would allow the user to play a lottery game.
- 
-The game generates 5 random secret lottery numbers between 1 and 40.  Once the numbers have been chosen, they are checked to see if there is any duplicates and if there is they are regenrated. Then the user is asked to enter three lines of 5 numbers each.  These numbers are then compared to the secret lottery numbers one line at a time.  
+## Lotto App
 
-The program outputs to the user the numbers randomly generated (the Lottery Numbers), then how many numbers per line the user guessed correctly.  
+A Java Swing lottery game. Enter three lines of five distinct numbers from 1 to 40. The app draws five unique winning numbers and displays the number of matches on each line.
 
-It is a Basic Java app that was built using TextPad and was a project in our Software Development class in NCI 2016.
+### Requirements
 
+- Java 8 or newer
+- Maven 3.6 or newer
+
+### Run
+
+From the repository root, run:
+
+```text
+mvn package
+java -cp target/classes LottoApp
+```
+
+The app accepts only whole numbers from 1 to 40, rejects duplicates within a line, and exits cleanly if input is cancelled.
+
+### Test
+
+```text
+mvn test
+```
